@@ -1,4 +1,14 @@
-# screenshot-rs
+# screen-shot-rs
+
+[![Crates.io](https://img.shields.io/crates/v/screen-shot)](https://crates.io/crates/screen-shot)
+[![Downloads](https://img.shields.io/crates/d/screen-shot)](https://crates.io/crates/screen-shot)
+[![Docs.rs](https://img.shields.io/badge/docs.rs-latest-blue)](https://docs.rs/screen-shot)
+[![License](https://img.shields.io/badge/license-CC0--1.0-lightgray)](LICENSE)
+[![Issues](https://img.shields.io/github/issues/ssrlive/screen-shot-rs)](https://github.com/ssrlive/screen-shot-rs/issues)
+[![Rust Edition](https://img.shields.io/badge/edition-2024-informational)](Cargo.toml)
+[![Unsafe](https://img.shields.io/badge/unsafe-FFI%20+%20raw%20ptrs-red)](#-safety)
+[![Maintenance](https://img.shields.io/badge/maintenance-active-brightgreen)](https://github.com/ssrlive/screen-shot-rs)
+
 Get a bitmap image of any display in Rust. This crate is hosted on [crates.io](https://crates.io/crates/screen-shot).
 
 > **Note:** This crate is a fork of [alexchandel/screenshot-rs](https://github.com/alexchandel/screenshot-rs).
