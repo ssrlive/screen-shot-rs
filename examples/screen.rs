@@ -1,5 +1,5 @@
 fn main() {
-    let s = screenshot::get_screenshot(0).unwrap();
+    let s = screen_shot::get_screenshot(0).unwrap();
 
     println!(
         "{} x {} x {} = {} bytes",

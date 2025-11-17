@@ -1,23 +1,23 @@
 # screenshot-rs
-Get a bitmap image of any display in Rust. This crate is hosted on [crates.io](https://crates.io/crates/screenshot).
+Get a bitmap image of any display in Rust. This crate is hosted on [crates.io](https://crates.io/crates/screen-shot).
+
+> **Note:** This crate is a fork of [alexchandel/screenshot-rs](https://github.com/alexchandel/screenshot-rs).
 
 Contributions welcome!
 
 ## Examples
 
-```rust
-extern crate image;
-extern crate screenshot;
-use screenshot::get_screenshot;
+```rust,no_run
+use screen_shot::get_screenshot;
 
-fn main() {
+{
 	let s = get_screenshot(0).unwrap();
 
 	println!("{} x {}", s.width(), s.height());
 
-	image::save_buffer(&Path::new("test.png"),
-		s.as_slice(), s.width() as u32, s.height() as u32, image::RGBA(8))
-	.unwrap();
+	// ::image::save_buffer(&Path::new("test.png"),
+	// 	s.as_slice(), s.width() as u32, s.height() as u32, image::RGBA(8))
+	// .unwrap();
 }
 ```
 

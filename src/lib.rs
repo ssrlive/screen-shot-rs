@@ -1,3 +1,5 @@
+#![doc = include_str!("../README.md")]
+
 //! Capture a bitmap image of a display. The resulting screenshot is stored in
 //! the `Screenshot` type, which varies per platform.
 //!
@@ -139,7 +141,7 @@ mod ffi {
             let width = img.width as usize;
             let row_len = img.bytes_per_line as usize;
             let pixel_bits = img.bits_per_pixel as usize;
-            if pixel_bits % 8 != 0 {
+            if !pixel_bits.is_multiple_of(8) {
                 XDestroyImage(&mut *img);
                 return Err("Pixels aren't integral bytes.");
             }
@@ -253,7 +255,7 @@ mod ffi {
             let height = CGImageGetHeight(cg_img) as usize;
             let row_len = CGImageGetBytesPerRow(cg_img) as usize;
             let pixel_bits = CGImageGetBitsPerPixel(cg_img) as usize;
-            if pixel_bits % 8 != 0 {
+            if !pixel_bits.is_multiple_of(8) {
                 return Err("Pixels aren't integral bytes.");
             }
 
@@ -330,7 +332,7 @@ mod ffi {
     type HGDIOBJ = HANDLE;
     type LPBITMAPINFO = PVOID; // Hack
 
-    const NULL: *mut c_void = 0usize as *mut c_void;
+    const NULL: *mut c_void = std::ptr::null_mut::<c_void>();
     const HGDI_ERROR: *mut c_void = -1isize as *mut c_void;
     const SM_CXSCREEN: c_int = 0;
     const SM_CYSCREEN: c_int = 1;

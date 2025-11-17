@@ -1,11 +1,11 @@
 [package]
-name = "screenshot"
+name = "screen-shot"
 version = "0.0.7"
 edition = "2024"
-authors = ["Alex <alexchandel@gmail.com>"]
+authors = ["@ssrlive", "Alex <alexchandel@gmail.com>"]
 description = "Get a bitmap image of any display."
 keywords = ["graphics", "image", "gui", "scripting"]
-repository = "https://github.com/alexchandel/screenshot-rs"
+repository = "https://github.com/ssrlive/screen-shot-rs"
 readme = "README.md"
 license = "CC0-1.0"
 
@@ -13,8 +13,8 @@ license = "CC0-1.0"
 x11 = {version = "2.21.0", default-features = false, features = ["xmu"]}
 
 [dependencies]
-libc = "0.2.175"
+libc = "0.2.177"
 
 [dev-dependencies]
 bmp = "0.5.0"
-image = "0.25.6"
+image = "0.25.9"
